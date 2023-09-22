@@ -21,7 +21,8 @@ namespace EmployeeOOP.Classes
 
         public override string ToString()
         {
-            return $"{base.ToString()} \n\t Salario: {GetValueToPay():C2}"; //C de Currency (Money), el 2 es de 2 DECIMALES
+            return $"{base.ToString()} " +
+                $"\n\t Salario: {GetValueToPay():C2}"; //C de Currency (Money), el 2 es de 2 DECIMALES
         }
 
         #endregion
