@@ -15,7 +15,7 @@ namespace EmployeeOOP
                 //Declarar algunas variables
                 int day, month, year, id, sales;
                 string firstName, lastName;
-                decimal salary, commissionPercentaje;
+                decimal salary, commissionPercentaje,hours, hoursValue;
 
                 Console.Write("Ingresar el día: ");
                 day = Convert.ToInt32(Console.ReadLine());//ToInt32, ToDecimal, ToDouble, ToFloat, ToBoolel, para cambiar el console Read Line
@@ -96,7 +96,41 @@ namespace EmployeeOOP
                     Sales = sales,
                     CommissionPercentaje= commissionPercentaje / 100
                 };
+                Console.Clear();
+                Console.WriteLine(commissionEmployee);
 
+
+                Console.WriteLine("***Contrato empleado por horas***");
+
+                Console.Write("Ingrese Identifiación: ");
+                id = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Ingrese nombre completo: ");
+                firstName = Console.ReadLine();
+
+                Console.Write("Ingrese apellidos: ");
+                lastName = Console.ReadLine();
+
+                Console.Write("Ingrese las horas trabajadas: ");
+                hours = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Ingrese el valor de la hora: ");
+                hoursValue = Convert.ToDecimal(Console.ReadLine());
+
+                HourlyEmployee hourlyEmployee = new HourlyEmployee()
+                {
+                    Id = id,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    BirthDate = dateObject,
+                    HiringDate = dateObject,
+                    IsActive = true,
+                    Hours = hours,
+                    HoursValue = hoursValue
+                };
+
+                Console.Clear();
+                Console.WriteLine(hourlyEmployee);
 
 
 
