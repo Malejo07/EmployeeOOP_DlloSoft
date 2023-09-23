@@ -15,7 +15,7 @@ namespace EmployeeOOP
                 //Declarar algunas variables
                 int day, month, year, id, sales;
                 string firstName, lastName;
-                decimal salary, commissionPercentaje,hours, hoursValue;
+                decimal salary, commissionPercentaje,hours, hoursValue, Base;
 
                 Console.Write("Ingresar el día: ");
                 day = Convert.ToInt32(Console.ReadLine());//ToInt32, ToDecimal, ToDouble, ToFloat, ToBoolel, para cambiar el console Read Line
@@ -68,38 +68,6 @@ namespace EmployeeOOP
                 Console.WriteLine(salaryEmployee);
 
 
-                Console.WriteLine("***Comisión del Empleado***");
-
-                Console.Write("Ingrese Identifiación: ");
-                id = Convert.ToInt32(Console.ReadLine());
-
-                Console.Write("Ingrese nombre completo: ");
-                firstName = Console.ReadLine();
-
-                Console.Write("Ingrese apellidos: ");
-                lastName = Console.ReadLine();
-
-                Console.Write("Ingrese el valor de las ventas: ");
-                sales = Convert.ToInt32(Console.ReadLine());
-
-                Console.Write("Ingrese el porcentaje de comisión: ");
-                commissionPercentaje = Convert.ToDecimal(Console.ReadLine());
-
-                CommissionEmployee commissionEmployee = new CommissionEmployee()
-                {
-                    Id = id,
-                    FirstName = firstName,
-                    LastName = lastName,
-                    BirthDate=dateObject,
-                    HiringDate = dateObject,
-                    IsActive = true,
-                    Sales = sales,
-                    CommissionPercentaje= commissionPercentaje / 100
-                };
-                Console.Clear();
-                Console.WriteLine(commissionEmployee);
-
-
                 Console.WriteLine("***Contrato empleado por horas***");
 
                 Console.Write("Ingrese Identifiación: ");
@@ -133,7 +101,62 @@ namespace EmployeeOOP
                 Console.WriteLine(hourlyEmployee);
 
 
+                Console.WriteLine("***Comisión del Empleado***");
 
+                Console.Write("Ingrese Identifiación: ");
+                id = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Ingrese nombre completo: ");
+                firstName = Console.ReadLine();
+
+                Console.Write("Ingrese apellidos: ");
+                lastName = Console.ReadLine();
+
+                Console.Write("Ingrese el valor de las ventas: ");
+                sales = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Ingrese el porcentaje de comisión: ");
+                commissionPercentaje = Convert.ToDecimal(Console.ReadLine());
+
+                CommissionEmployee commissionEmployee = new CommissionEmployee()
+                {
+                    Id = id,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    BirthDate=dateObject,
+                    HiringDate = dateObject,
+                    IsActive = true,
+                    Sales = sales,
+                    CommissionPercentaje= commissionPercentaje / 100
+                };
+                Console.Clear();
+                Console.WriteLine(commissionEmployee);
+
+                
+                Console.WriteLine("***Comisión base empleado***");
+
+                Console.Write("Ingrese Identifiación: ");
+                id = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Ingrese nombre completo: ");
+                firstName = Console.ReadLine();
+
+                Console.Write("Ingrese apellidos: ");
+                lastName = Console.ReadLine();
+
+                Console.Write("Ingrese la comisión base del empleado: ");
+                Base = Convert.ToInt32(Console.ReadLine());
+
+                BaseCommissionEmployee baseCommissionEmployee = new BaseCommissionEmployee()
+                {
+                    Id = id,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    BirthDate = dateObject,
+                    HiringDate = dateObject,
+                    IsActive = true,
+                    Base = Base,
+                };
             }
             catch (Exception ex)
             {
