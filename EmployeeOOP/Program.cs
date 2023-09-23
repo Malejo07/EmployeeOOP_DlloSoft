@@ -31,9 +31,10 @@ namespace EmployeeOOP
                 Console.Write("\n"); //Salto de línea
                 Console.WriteLine(dateObject.ToString()); //23/50/23232
 
-                Console.Write("***Datos Salario Empleado***");
+                
+                Console.Write("\n***Datos Salario Empleado***");
 
-                Console.Write("Ingrese Identifiación: ");
+                Console.Write("\nIngrese Identifiación: ");
                 id = Convert.ToInt32(Console.ReadLine());
 
                 Console.Write("Ingrese nombre completo: ");
@@ -68,7 +69,7 @@ namespace EmployeeOOP
                 Console.WriteLine(salaryEmployee);
 
 
-                Console.WriteLine("***Contrato empleado por horas***");
+                Console.WriteLine("\n***Contrato empleado por horas***");
 
                 Console.Write("Ingrese Identifiación: ");
                 id = Convert.ToInt32(Console.ReadLine());
@@ -157,6 +158,8 @@ namespace EmployeeOOP
                     IsActive = true,
                     Base = Base,
                 };
+                Console.Clear();
+                Console.WriteLine(baseCommissionEmployee);
             }
             catch (Exception ex)
             {
