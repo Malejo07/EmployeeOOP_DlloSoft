@@ -29,7 +29,7 @@ namespace EmployeeOOP
                 //Instanciar la clase Date.cs
                 Date dateObject = new Date(year, month, day);
                 Console.Write("\n"); //Salto de línea
-                Console.WriteLine(dateObject.ToString()); //23/50/23232
+                Console.WriteLine("\n"dateObject.ToString()); //23/50/23232
 
                 
                 Console.Write("\n***Datos Salario Empleado***");

@@ -88,6 +88,7 @@ namespace EmployeeOOP.Classes
             }
         }
 
+
         public override string ToString()
         {
             var dateConcatenated1 = _day + "/" + _month + "/" + _year; //Forma más arcaica y fea
